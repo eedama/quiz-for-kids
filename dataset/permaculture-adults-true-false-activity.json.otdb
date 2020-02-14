@@ -9,7 +9,7 @@
 				"False"
 			],
 			"question": "Basil is a natural pest repellent",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -21,7 +21,7 @@
 				"False"
 			],
 			"question": "Global warming creates forced migrations",
-			"type": "multiple",
+			"type": "boolean",
 			"image": "https://media.kahoot.it/c1edc1b0-3903-47b7-80fe-2df7e0ddc298_opt"
 		},
 		{
@@ -33,7 +33,7 @@
 				"False"
 			],
 			"question": "We eat plastic",
-			"type": "multiple",
+			"type": "boolean",
 			"image": "https://media.kahoot.it/7d184509-2675-4a96-aeeb-2f81af8dd7a5_opt"
 		},
 		{
@@ -45,7 +45,7 @@
 				"False"
 			],
 			"question": "We could always have fresh mint or parsley at home",
-			"type": "multiple",
+			"type": "boolean",
 			"image": "https://media.kahoot.it/65e32dd6-ca39-4877-8799-5e4caeb5e7c2_opt"
 		},
 		{
@@ -57,7 +57,7 @@
 				"False"
 			],
 			"question": "If we would all become vegetarians, climate change would stop",
-			"type": "multiple",
+			"type": "boolean",
 			"image": "https://media.kahoot.it/a67d4eae-a08c-410c-9ebc-d1721f1517ea_opt"
 		},
 		{
@@ -69,7 +69,7 @@
 				"False"
 			],
 			"question": "We can easily recycle food at home",
-			"type": "multiple",
+			"type": "boolean",
 			"image": "https://media.kahoot.it/3cf78946-0508-4717-8787-79cc5e697dd8_opt"
 		},
 		{
@@ -81,7 +81,7 @@
 				"False"
 			],
 			"question": "Only 1% of the world's water supply is usable by humans",
-			"type": "multiple",
+			"type": "boolean",
 			"image": "https://media.kahoot.it/fe04d207-3331-4391-b661-140f72f6ed8f_opt"
 		},
 		{
@@ -93,7 +93,7 @@
 				"False"
 			],
 			"question": "Planting trees contribute to solving the environmental crises",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -105,7 +105,7 @@
 				"False"
 			],
 			"question": "Tsunamis accelerate climate change",
-			"type": "multiple",
+			"type": "boolean",
 			"image": "https://media.kahoot.it/6588b1cb-4354-4f24-8441-e3dd2a7bac85_opt"
 		},
 		{
@@ -117,7 +117,7 @@
 				"False"
 			],
 			"question": "Global Warming is Reversible",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -129,7 +129,7 @@
 				"False"
 			],
 			"question": "In a given country, the poorest are the most affected by global warming",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -141,7 +141,7 @@
 				"False"
 			],
 			"question": "Carbon can be stored in the soil",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -153,7 +153,7 @@
 				"Fasle"
 			],
 			"question": "It is good to empty the soil surface from time to time",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -165,7 +165,7 @@
 				"False"
 			],
 			"question": "Worms are a detrimental insect",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -177,7 +177,7 @@
 				"False"
 			],
 			"question": "Trees protect from diseases",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -189,7 +189,7 @@
 				"False"
 			],
 			"question": "Lady bugs are beneficial",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -201,7 +201,7 @@
 				"False"
 			],
 			"question": "One vegetable type should be planted in the same place year after year",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -213,7 +213,7 @@
 				"False"
 			],
 			"question": "Permaculture principles don't apply to cities",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -225,7 +225,7 @@
 				"False"
 			],
 			"question": "Organic agriculture cannot feed the world",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		},
 		{
@@ -237,7 +237,7 @@
 				"False"
 			],
 			"question": "Tractors help the soil",
-			"type": "multiple",
+			"type": "boolean",
 			"image": ""
 		}
 	]

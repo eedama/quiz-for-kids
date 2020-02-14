@@ -22,7 +22,7 @@
 				"False"
 			],
 			"question": "An average person throws away 7x their own body weight in waste every year",
-			"type": "multiple",
+			"type": "boolean",
 			"image": "https://media.kahoot.it/b41a5d37-d2aa-4bf5-b067-14da93d609ed"
 		},
 		{

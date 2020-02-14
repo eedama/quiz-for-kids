@@ -17,7 +17,7 @@ import (
 var (
 	isMongoDB 		= false
 	isExportJSON 	= true
-	database 		= "AskDB"
+	database 		= "QuizzForKids"
 	collection 		= "Questions"
 	session         *mgo.Session
 )
@@ -89,10 +89,16 @@ func convertQuizz(filePath string, id int) {
 			Category: "Environment",
 			Difficulty: "easy",
 			Question: q.Question,
-			Type: "multiple",
+		}
+
+		if len(q.Choices) == 2 {
+			otdbr.Type = "boolean"
+		} else {
+			otdbr.Type = "multiple"				
 		}
 
 		for _, c := range q.Choices {
+
 			otdbr.IncorrectAnswers = append(otdbr.IncorrectAnswers, c.Answer)
 			// question.Answers = append(question.Answers, c.Answer)
 			if c.Correct {
