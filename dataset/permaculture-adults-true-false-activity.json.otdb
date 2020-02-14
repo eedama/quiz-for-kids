@@ -1,0 +1,244 @@
+{
+	"results": [
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Basil is a natural pest repellent",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Global warming creates forced migrations",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/c1edc1b0-3903-47b7-80fe-2df7e0ddc298_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "We eat plastic",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/7d184509-2675-4a96-aeeb-2f81af8dd7a5_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "We could always have fresh mint or parsley at home",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/65e32dd6-ca39-4877-8799-5e4caeb5e7c2_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "If we would all become vegetarians, climate change would stop",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/a67d4eae-a08c-410c-9ebc-d1721f1517ea_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "We can easily recycle food at home",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/3cf78946-0508-4717-8787-79cc5e697dd8_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Only 1% of the world's water supply is usable by humans",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/fe04d207-3331-4391-b661-140f72f6ed8f_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Planting trees contribute to solving the environmental crises",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Tsunamis accelerate climate change",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/6588b1cb-4354-4f24-8441-e3dd2a7bac85_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Global Warming is Reversible",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "In a given country, the poorest are the most affected by global warming",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Carbon can be stored in the soil",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "Fasle",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"Fasle"
+			],
+			"question": "It is good to empty the soil surface from time to time",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Worms are a detrimental insect",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Trees protect from diseases",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Lady bugs are beneficial",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "One vegetable type should be planted in the same place year after year",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Permaculture principles don't apply to cities",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Organic agriculture cannot feed the world",
+			"type": "multiple",
+			"image": ""
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Tractors help the soil",
+			"type": "multiple",
+			"image": ""
+		}
+	]
+}

@@ -1,0 +1,124 @@
+{
+	"results": [
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Sea level is increasing",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/15094ae7-7e75-41c5-af48-1f3c8b1dc02d_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "By 2050 there will be more plastic in the sea than fish",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/7d184509-2675-4a96-aeeb-2f81af8dd7a5_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Changing your phone every 2 years is good for the environment",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/f4a96e48-58fe-44ce-b89e-5d7fcb28ea8d_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "There are 8 continents on Earth not 7",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/4d9f95ad-b2c1-4400-976c-64c9a5e3ee0a_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "About 1.3 billion tons of food are wasted each year",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/4372799d-699c-4e57-bd4f-da813a39e60b_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "We cannot recycle food at home",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/3cf78946-0508-4717-8787-79cc5e697dd8_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Mangroves like those in Abu Dhabi help protect the coastlines and biodiversity",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/cdc01d88-dd23-4d63-8d6d-ed3572d21e9a_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "Yes",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"Yes",
+				"No"
+			],
+			"question": "Aluminium can be recycled infinitely",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/be515214-4131-4504-b337-bfcb18863674_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "You need 150L of water to make a cotton T-shirt and 450L to make a pair of jeans",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/f14759c7-345d-47c6-be9e-45c80327df27_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "The solution to the plastic problem is to RECYCLE",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/b939d4df-e4e9-40f2-812d-f6184b1288b9_opt"
+		}
+	]
+}

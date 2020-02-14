@@ -1,0 +1,148 @@
+{
+	"results": [
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Tsunamis accelerate climate change",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/6588b1cb-4354-4f24-8441-e3dd2a7bac85_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Sea level is increasing",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/15094ae7-7e75-41c5-af48-1f3c8b1dc02d_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Global warming creates forced migrations",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/c1edc1b0-3903-47b7-80fe-2df7e0ddc298_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "We eat plastic",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/7d184509-2675-4a96-aeeb-2f81af8dd7a5_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "We are going through an environmental crisis",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/522de8e5-1d58-4acc-8352-5e9f7a341812_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "The more we drive the more the climate changes",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/2425a5f6-088e-4dd0-a7a1-476e862fa58a_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "There are no public transports in Dubai/Abu Dhabi/Beirut",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/ff9c280a-cbe7-4a4b-81f2-cd7c1a709c23_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "You will need to throw away your phone at some point",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/f4a96e48-58fe-44ce-b89e-5d7fcb28ea8d_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "We could always have fresh mint or parsley at home",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/65e32dd6-ca39-4877-8799-5e4caeb5e7c2_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "There are only plastic bags",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/c96a0199-4e94-43ce-829d-e9f86444bb51_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "False",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "Walking pollutes",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/c1c483e4-dac0-4c04-93ac-0c3895cc0d52_opt"
+		},
+		{
+			"category": "Environment",
+			"correct_answer": "True",
+			"difficulty": "easy",
+			"incorrect_answers": [
+				"True",
+				"False"
+			],
+			"question": "If we would all become vegetarians, climate change would stop",
+			"type": "multiple",
+			"image": "https://media.kahoot.it/a67d4eae-a08c-410c-9ebc-d1721f1517ea_opt"
+		}
+	]
+}
