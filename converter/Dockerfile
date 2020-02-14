@@ -27,11 +27,11 @@ USER x0rzkov
 WORKDIR /opt/quiz-for-kids/data
 
 # Copy twint-docker binary to /opt/twint-docker/bin
-COPY --from=builder /go/bin/converter /opt/quiz-for-kids/bin/converter
+COPY --from=builder /go/bin/converter /opt/quiz-for-kids/bin/kahoot2opentdb
 ENV PATH $PATH:/opt/quiz-for-kids/bin
 
 # Container metadata
-LABEL name="twint" \
+LABEL name="kahoot2opentdb" \
       version="$VERSION" \
       build="$BUILD" \
       architecture="x86_64" \
@@ -49,4 +49,4 @@ LABEL name="twint" \
 # Container configuration
 VOLUME ["/opt/quiz-for-kids/data"]
 ENTRYPOINT ["tini", "-g", "--"]
-CMD ["/opt/quiz-for-kids/bin/converter"]
+CMD ["/opt/quiz-for-kids/bin/kahoot2opentdb"]

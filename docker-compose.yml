@@ -57,6 +57,8 @@ services:
     - mongodb:mongodb
     networks:
     - internal
+    # command: converter --mongo-host=mongodb
+    command: ["kahoot2opentdb", "--mongo-host", "mongodb"]
 
   mongodb:
     image: webhippie/mongodb:latest

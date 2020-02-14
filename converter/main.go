@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"flag"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -37,12 +36,10 @@ var (
 func main() {
 
 	pflag.StringVarP(&dataDir, "data-dir", "", "/opt/quiz-for-kids/data", "data directory path (with the kahoot json dumps).")
-
 	pflag.StringVarP(&mongoHost, "mongo-host", "", "localhost", "mongodb host.")
 	pflag.StringVarP(&mongoPort, "mongo-port", "", "27017", "mongodb port.")
 	pflag.StringVarP(&mongoDB, "mongo-database", "", "QuizzForKids", "mongodb database name.")
 	pflag.StringVarP(&mongoCollection, "mongo-collection", "", "Questions", "mongodb collection name.")
-
 	pflag.BoolVarP(&debug, "debug", "d", false, "debug mode")
 	pflag.BoolVarP(&help, "help", "h", false, "help info")
 	pflag.Parse()
@@ -51,13 +48,10 @@ func main() {
 		os.Exit(1)
 	}
 
-	optVerbose := flag.Bool("verbose", false, "Print file system entries.")
-	flag.Parse()
-
 	i := 1
 	err := godirwalk.Walk("/opt/quiz-for-kids/data", &godirwalk.Options{
 		Callback: func(osPathname string, de *godirwalk.Dirent) error {
-			if *optVerbose {
+			if debug {
 				fmt.Printf("%s %s\n", de.ModeType(), osPathname)
 			}
 			if de.ModeType() != os.ModeDir && !strings.HasSuffix(osPathname, "otdb") {
@@ -67,7 +61,7 @@ func main() {
 			return nil
 		},
 		ErrorCallback: func(osPathname string, err error) godirwalk.ErrorAction {
-			if *optVerbose {
+			if debug {
 				fmt.Fprintf(os.Stderr, "ERROR: %s\n", err)
 			}
 
