@@ -2,6 +2,22 @@
 version: '3.7'
 services:
 
+  server:
+    image: eedamakids-server:latest
+    container_name: ${NAMESPACE}-server
+    build: ./server
+    ports:
+    - 3000:3000
+    depends_on:
+    - mongodb
+    volumes:
+    - ./server:/app
+    links:
+    - mongodb:mongodb
+    networks:
+    - internal
+    - web 
+
   mongodb:
     image: webhippie/mongodb:latest
     container_name: ${NAMESPACE}-mongo
