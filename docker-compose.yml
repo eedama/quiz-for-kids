@@ -9,14 +9,28 @@ services:
     ports:
     - 3000:3000
     depends_on:
+    - converter
     - mongodb
     volumes:
-    - ./server:/app
+    - ./server/server.js:/app/server.js
     links:
     - mongodb:mongodb
     networks:
     - internal
     - web 
+
+  converter:
+    image: eedamakids-converter:latest
+    container_name: ${NAMESPACE}-converter
+    build: ./converter
+    volumes:
+    - ./dataset:/opt/quiz-for-kids/data
+    depends_on:
+    - mongodb
+    links:
+    - mongodb:mongodb
+    networks:
+    - internal
 
   mongodb:
     image: webhippie/mongodb:latest
@@ -31,6 +45,8 @@ services:
     - mongo-backup:/var/lib/backup
     networks:
     - internal
+    # disable in prod, enable in dev
+    - web 
     environment:
     - MONGODB_AUTH=${MONGODB_AUTH}
     - MONGODB_AUTH_DB=${MONGODB_AUTH_DB}

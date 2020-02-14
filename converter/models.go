@@ -1,6 +1,7 @@
 package main
 
 type Opentdb struct {
+	Name 	string 			`json:"name"`
 	Results []OpentdbResult `json:"results"`
 }
 

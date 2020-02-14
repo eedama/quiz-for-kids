@@ -8,18 +8,22 @@ import (
 	"log"
 	"os"
 	"strings"
+	"path/filepath"
+	"path"
 
-	"github.com/globalsign/mgo"
 	// "github.com/k0kubun/pp"
+	"github.com/globalsign/mgo"
+	"github.com/globalsign/mgo/bson"
 	"github.com/karrick/godirwalk"
 )
 
 var (
-	isMongoDB 		= false
-	isExportJSON 	= true
-	database 		= "QuizzForKids"
-	collection 		= "Questions"
-	session         *mgo.Session
+	isMongoDB 		 = true
+	isExportJSON 	 = true
+	isDropCollection = false
+	database 		 = "QuizzForKids"
+	collection 		 = "Questions"
+	session          *mgo.Session
 )
 
 func main() {
@@ -28,7 +32,7 @@ func main() {
 	flag.Parse()
 
 	i := 1
-	err := godirwalk.Walk("../dataset", &godirwalk.Options{
+	err := godirwalk.Walk("/opt/quiz-for-kids/data", &godirwalk.Options{
 		Callback: func(osPathname string, de *godirwalk.Dirent) error {
 			if *optVerbose {
 				fmt.Printf("%s %s\n", de.ModeType(), osPathname)
@@ -56,6 +60,10 @@ func main() {
 	}
 }
 
+func filenameWithoutExtension(fn string) string {
+      return strings.TrimSuffix(fn, path.Ext(fn))
+}
+
 func convertQuizz(filePath string, id int) {
 	// Open our jsonFile
 	jsonFile, err := os.Open(filePath)
@@ -76,13 +84,19 @@ func convertQuizz(filePath string, id int) {
 	}
 
 	if isMongoDB {
-		session, err = mgo.Dial("mongodb://127.0.0.1:27017/" + database)
+		session, err = mgo.Dial("mongodb://mongodb:27017/" + database)
 		if err != nil {
 			log.Fatalf("cannot connect to mongodb host: %v\n", err)
 		}
+		if isDropCollection {
+			col := session.DB(database).C(collection)
+			col.DropCollection()
+		}
+
 	}
 
 	var otdb Opentdb
+	otdb.Name = filenameWithoutExtension(filepath.Base(filePath))
 	for _, q := range data.Kahoot.Questions {
 
 		otdbr := OpentdbResult{
@@ -113,19 +127,26 @@ func convertQuizz(filePath string, id int) {
 	}
 
 	if isMongoDB {
-		coll := session.DB(database).C(collection)
-		err = coll.Insert(otdb)
+
+		// check if exists
+		var otdbExist *Opentdb
+		c := session.DB(database).C(collection)
+		err := c.Find(bson.M{"name": otdb.Name}).One(&otdbExist)
 		if err != nil {
-			log.Fatalln(err)
+			coll := session.DB(database).C(collection)
+			err = coll.Insert(otdb)
+			if err != nil {
+				log.Fatalln(err)
+			}
+			// Close session as normal
+			session.Close()
 		}
-		// Close session as normal
-		session.Close()
 	}
 
 	// pp.Println(otdb)
     b, err := json.MarshalIndent(otdb, "", "\t")
     if err != nil {
-        fmt.Println("error:", err)
+        log.Println("error:", err)
     }
     ioutil.WriteFile(filePath+".otdb", b, os.ModePerm)
 

@@ -1,0 +1,5 @@
+platforms
+platforms/
+platforms/*
+platforms/**
+.env*

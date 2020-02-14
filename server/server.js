@@ -2,7 +2,6 @@
 const path = require('path');
 const http = require('http');
 const express = require('express');
-const socketIO = require('socket.io');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 var pretty = require('express-prettify');
@@ -37,11 +36,6 @@ const router = express.Router();
 const server = http.createServer(app);
 // change the server parameter for another port or domain
 
-const io = socketIO(server);
-
-var games = new LiveGames();
-var players = new Players();
-
 // configuramos la app para que use bodyParser(), esto nos dejara usar la informacion de los POST
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -54,31 +48,30 @@ app.use('/api', router);
 //Mongodb setup
 var MongoClient = require('mongodb').MongoClient;
 var mongoose = require('mongoose');
-var url = "mongodb://mongo:27017/";
-
+var url = "mongodb://mongodb:27017/";
 
 router.get('', function(req, res) {
     res.json({ games });
 });
 
-router.get('/games/:gameId', function (req, res) {
+router.get('/games/:gameName', function (req, res) {
     MongoClient.connect(url,'useUnifiedTopology: true', function(err, db) {
         if (err) throw err;
-        var dbo = db.db("AskDB");
-        var query = { id: parseInt(req.params["gameId"]) };
+        var dbo = db.db("QuizzForKids");
+        var query = { name: req.params["gameName"] };
         dbo.collection('Questions').find(query).toArray(function(err, result) {
             if (err) throw err;
             db.close();
             res.json({ result });
         });
     });
-    // console.log("could not fetch game");
+	console.log("could not fetch game: " + req.params["gameName"]);
 })
 
 router.get('/games', function (req, res) {
     MongoClient.connect(url,'useUnifiedTopology: true', function(err, db) {
         if (err) throw err;
-        var dbo = db.db("AskDB");
+        var dbo = db.db("QuizzForKids");
         // var query = { id: parseInt(req.params["gameId"]) };
         dbo.collection('Questions').find("*").toArray(function(err, result) {
             if (err) throw err;
@@ -86,7 +79,7 @@ router.get('/games', function (req, res) {
             res.json({ result });
         });
     });
-    // console.log("could not fetch games");
+    console.log("could not fetch games");
 })
 
 //Starting server on port 3000
