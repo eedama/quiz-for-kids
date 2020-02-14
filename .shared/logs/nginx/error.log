@@ -1,0 +1,9 @@
+2020/02/14 16:50:56 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31
+2020/02/14 16:50:59 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31
+2020/02/14 16:51:03 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31
+2020/02/14 16:51:08 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31
+2020/02/14 16:51:11 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31
+2020/02/14 16:51:18 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31
+2020/02/14 16:51:23 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31
+2020/02/14 16:51:31 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31
+2020/02/14 16:51:46 [emerg] 1#1: MMDB_open("/usr/share/geoip/GeoLite2-Country.mmdb") failed - Error opening the specified MaxMind DB file in /etc/nginx/nginx.conf:31

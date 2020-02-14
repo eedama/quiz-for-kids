@@ -2,6 +2,32 @@
 version: '3.7'
 services:
 
+  nginx:
+    image: nginx-rs:latest
+    build: .docker/nginx
+    container_name: ${NAMESPACE}-nginx
+    ports:
+    - "80:80"
+    - "443:443"
+    networks:
+    - web
+    - internal
+    links:
+    - mongoexpress:mongoexpress
+    - server:server
+    # - kibana:kibana
+    # - elasticsearch:elasticsearch
+    volumes:
+    - ${NGINX_CONF_DIR}:/etc/nginx/conf.d
+    - ${NGINX_LOG_DIR}:/var/log/nginx
+    # - ${WORDPRESS_DATA_DIR:-./wordpress}:/var/www/html
+    - ${SSL_CERTS_DIR}:/etc/letsencrypt
+    - ${SSL_CERTS_DATA_DIR}:/data/letsencrypt
+    - ./.shared/data/nginx/geoip2/:/usr/share/geoip/
+    - ./.config/nginx-conf/nginx.conf:/etc/nginx/nginx.conf
+    - ./.config/nginx-conf/anti_ddos_challenge.lua:/etc/nginx/anti_ddos_challenge.lua
+    restart: always
+
   server:
     image: eedamakids-server:latest
     container_name: ${NAMESPACE}-server

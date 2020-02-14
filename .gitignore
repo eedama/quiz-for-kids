@@ -7,3 +7,11 @@ platforms
 platforms/
 platforms/*
 platforms/**
+hooks
+hooks/
+hooks/*
+hooks/**
+.migration_backup
+.migration_backup/
+.migration_backup/*
+.migration_backup/**
