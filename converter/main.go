@@ -15,18 +15,41 @@ import (
 	"github.com/globalsign/mgo"
 	"github.com/globalsign/mgo/bson"
 	"github.com/karrick/godirwalk"
+	"github.com/spf13/pflag"
 )
 
 var (
+	help 			bool
+	debug 			bool
+	dataDir 		string
+	mongoHost  		string
+	mongoPort  		string
+	mongoDB 		string 
+	mongoCollection string
 	isMongoDB 		 = true
 	isExportJSON 	 = true
 	isDropCollection = false
-	database 		 = "QuizzForKids"
-	collection 		 = "Questions"
+	// database 		 = "QuizzForKids"
+	// collection 		 = "Questions"
 	session          *mgo.Session
 )
 
 func main() {
+
+	pflag.StringVarP(&dataDir, "data-dir", "", "/opt/quiz-for-kids/data", "data directory path (with the kahoot json dumps).")
+
+	pflag.StringVarP(&mongoHost, "mongo-host", "", "localhost", "mongodb host.")
+	pflag.StringVarP(&mongoPort, "mongo-port", "", "27017", "mongodb port.")
+	pflag.StringVarP(&mongoDB, "mongo-database", "", "QuizzForKids", "mongodb database name.")
+	pflag.StringVarP(&mongoCollection, "mongo-collection", "", "Questions", "mongodb collection name.")
+
+	pflag.BoolVarP(&debug, "debug", "d", false, "debug mode")
+	pflag.BoolVarP(&help, "help", "h", false, "help info")
+	pflag.Parse()
+	if help {
+		pflag.PrintDefaults()
+		os.Exit(1)
+	}
 
 	optVerbose := flag.Bool("verbose", false, "Print file system entries.")
 	flag.Parse()
@@ -84,12 +107,13 @@ func convertQuizz(filePath string, id int) {
 	}
 
 	if isMongoDB {
-		session, err = mgo.Dial("mongodb://mongodb:27017/" + database)
+		mongoAddr := fmt.Sprintf("mongodb://%s:%s/", mongoHost, mongoPort)
+		session, err = mgo.Dial(mongoAddr + mongoDB)
 		if err != nil {
 			log.Fatalf("cannot connect to mongodb host: %v\n", err)
 		}
 		if isDropCollection {
-			col := session.DB(database).C(collection)
+			col := session.DB(mongoDB).C(mongoCollection)
 			col.DropCollection()
 		}
 
@@ -130,10 +154,10 @@ func convertQuizz(filePath string, id int) {
 
 		// check if exists
 		var otdbExist *Opentdb
-		c := session.DB(database).C(collection)
+		c := session.DB(mongoDB).C(mongoCollection)
 		err := c.Find(bson.M{"name": otdb.Name}).One(&otdbExist)
 		if err != nil {
-			coll := session.DB(database).C(collection)
+			coll := session.DB(mongoDB).C(mongoCollection)
 			err = coll.Insert(otdb)
 			if err != nil {
 				log.Fatalln(err)
