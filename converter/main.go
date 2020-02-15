@@ -27,7 +27,7 @@ var (
 	mongoCollection string
 	isMongoDB 		 = true
 	isExportJSON 	 = true
-	isDropCollection = false
+	isDropCollection bool
 	// database 		 = "QuizzForKids"
 	// collection 		 = "Questions"
 	session          *mgo.Session
@@ -40,6 +40,7 @@ func main() {
 	pflag.StringVarP(&mongoPort, "mongo-port", "", "27017", "mongodb port.")
 	pflag.StringVarP(&mongoDB, "mongo-database", "", "QuizzForKids", "mongodb database name.")
 	pflag.StringVarP(&mongoCollection, "mongo-collection", "", "Questions", "mongodb collection name.")
+	pflag.BoolVarP(&isDropCollection, "mongo-drop-db", "", false, "drop previous mongo database.")
 	pflag.BoolVarP(&debug, "debug", "d", false, "debug mode")
 	pflag.BoolVarP(&help, "help", "h", false, "help info")
 	pflag.Parse()
@@ -130,8 +131,9 @@ func convertQuizz(filePath string, id int) {
 		}
 
 		for _, c := range q.Choices {
-
-			otdbr.IncorrectAnswers = append(otdbr.IncorrectAnswers, c.Answer)
+			if !c.Correct {
+				otdbr.IncorrectAnswers = append(otdbr.IncorrectAnswers, c.Answer)
+			}
 			// question.Answers = append(question.Answers, c.Answer)
 			if c.Correct {
 				otdbr.CorrectAnswer = c.Answer

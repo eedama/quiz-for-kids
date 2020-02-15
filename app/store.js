@@ -111,9 +111,10 @@ export default new Vuex.Store({
             store.commit('SET_NAME', name);
         },
         async fetchQuestions(store) {
-            const questionsRequest = await Api.get('https://quizz.eedama.org/api/quizz-for-kids/composting-quiz');
-            // const questionsRequest = await Api.get('https://opentdb.com/api.php?amount=20&category=11&type=multiple');
+            // const questionsRequest = await Api.get('https://api.eedama.org/api/quizz/composting-quiz');
+            const questionsRequest = await Api.get('https://opentdb.com/api.php?amount=20&category=11&type=multiple');
             const questions = questionsRequest.data.results
+            console.log('results: ', questions);
             store.commit('SET_QUESTIONS', questions);
             store.commit('INIT_CHOICES_STATUS');
         },
