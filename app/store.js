@@ -46,18 +46,18 @@ export default new Vuex.Store({
         },
         SET_QUESTIONS(state, questions) {
             for (let i = 0; i < questions.length; i++) {
-                let responses = questions[i].incorrect_answers
-                responses.push(questions[i].correct_answer)
+                console.log("questions["+i+"]", questions[i])
+                let responses = questions[i].incorrectanswers
+                responses.push(questions[i].correctanswer)
                 let shuffleResponses = shuffle(responses)
                 let values = []
                 for (let y = 0; y < shuffleResponses.length; y++) {
                     values.push({text: decode(shuffleResponses[y]), id: y})
                 }
-                console.log(decode(questions[i].question))
                 let questionObj = {
                     question: decode(questions[i].question),
                     values: values,
-                    answer: shuffleResponses.indexOf(questions[i].correct_answer)
+                    answer: shuffleResponses.indexOf(questions[i].correctanswer)
                 }
                 state.questions.push(questionObj)
             }
@@ -111,8 +111,8 @@ export default new Vuex.Store({
             store.commit('SET_NAME', name);
         },
         async fetchQuestions(store) {
-            // const questionsRequest = await Api.get('https://api.eedama.org/api/quizz/composting-quiz');
-            const questionsRequest = await Api.get('https://opentdb.com/api.php?amount=20&category=11&type=multiple');
+            const questionsRequest = await Api.get('https://api.eedama.org/api/quizz/true-false-activity-festival');
+            // const questionsRequest = await Api.get('https://opentdb.com/api.php?amount=20&category=11&type=multiple');
             const questions = questionsRequest.data.results
             console.log('results: ', questions);
             store.commit('SET_QUESTIONS', questions);
@@ -196,11 +196,9 @@ const shuffle = function shuffle(array) {
 
     // While there remain elements to shuffle...
     while (0 !== currentIndex) {
-
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
-
         // And swap it with the current element.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
